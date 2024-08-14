@@ -1,0 +1,24 @@
+package com.enesorhan.kotlinmaps.model
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.io.Serializable
+
+@Entity
+class Place(
+
+    @ColumnInfo("name")
+    val name: String,
+
+    @ColumnInfo("latitude")
+    val latitude: Double,
+
+    @ColumnInfo("longitude")
+    val longitude: Double
+
+) : Serializable {
+    @PrimaryKey(autoGenerate = true)
+    var id = 0
+
+}
